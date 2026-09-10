@@ -129,7 +129,7 @@ dispatch:
 	stq	$14,64($30)
 	stq	$15,72($30)
 
-	lda	$1,0x10000000		/* hwrpb */
+	ldah	$1,0x1000($31)		/* hwrpb = 0x10000000 */
 	ldq	$2,0xc0($1)		/* crb offset */
 	addq	$2,$1,$2		/* crb */
 	ldq	$27,0($2)		/* dispatch procedure value */
